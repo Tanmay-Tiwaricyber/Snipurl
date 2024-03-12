@@ -16,7 +16,7 @@ app.post('/shorten', (req, res) => {
   if (originalUrl) {
     const shortUrl = shortid.generate();
     urls[shortUrl] = originalUrl;
-    res.json({ shortUrl: `http://localhost:${PORT}/${shortUrl}` });
+    res.json({ shortUrl: `https://snipurl.onrender.com/${shortUrl}` });
   } else {
     res.status(400).json({ error: 'Invalid URL' });
   }
